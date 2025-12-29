@@ -14,7 +14,7 @@
         :root {
             --dourado: #b59b5d;
             --grafite: #333;
-            --cinza-claro: #f4f4f4;
+            --cinza-claro: #f8f8f8;
         }
 
         body {
@@ -24,139 +24,139 @@
             color: var(--grafite);
         }
 
-        /* Container mais justo para não sobrar tanto branco */
+        /* Container mais slim */
         .container-detalhe {
-            max-width: 900px;
-            margin: 10px auto;
-            padding: 20px;
+            max-width: 800px;
+            margin: 5px auto;
+            padding: 15px;
             display: flex;
-            gap: 30px;
+            gap: 20px;
             flex-wrap: wrap;
             background: white;
-            border-radius: 12px;
+            border-radius: 8px;
         }
 
         .voltar-container {
-            padding: 15px 20px 5px 20px;
+            padding: 10px 15px 0 15px;
         }
 
         .voltar-link {
             text-decoration: none;
-            color: #888;
-            font-size: 0.85rem;
+            color: #999;
+            font-size: 0.75rem;
+            /* Fonte bem pequena e discreta */
+            letter-spacing: 0.5px;
         }
 
-        /* Imagem menor e centralizada */
+        /* Imagem compacta */
         .produto-imagem-foco {
             flex: 1;
-            min-width: 280px;
-            max-width: 320px;
-            /* Reduzi o tamanho máximo da foto */
+            min-width: 250px;
+            max-width: 280px;
+            /* Reduzi ainda mais */
             margin: 0 auto;
         }
 
         .produto-imagem-foco img {
             width: 100%;
             height: auto;
-            border-radius: 8px;
+            border-radius: 6px;
             object-fit: contain;
         }
 
         .produto-info {
             flex: 1;
-            min-width: 280px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            /* Alinha o texto no topo */
+            min-width: 250px;
+            padding-top: 10px;
         }
 
         .material-tag {
             color: var(--dourado);
             font-weight: 700;
             text-transform: uppercase;
-            font-size: 0.7rem;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
+            font-size: 0.65rem;
+            /* Etiqueta bem delicada */
+            letter-spacing: 1.2px;
+            margin-bottom: 4px;
+            display: block;
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            /* Título menor e mais elegante */
-            margin: 0 0 10px 0;
+            font-size: 1.3rem;
+            /* Título bem menor */
+            margin: 0 0 8px 0;
             color: #111;
+            line-height: 1.2;
         }
 
         .preco-destaque {
-            font-size: 1.4rem;
+            font-size: 1.15rem;
+            /* Preço elegante, não gritante */
             color: #222;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-weight: 700;
         }
 
         .descricao {
-            line-height: 1.5;
-            color: #666;
-            margin-bottom: 25px;
-            font-size: 0.95rem;
-            /* Texto de descrição menor */
+            line-height: 1.4;
+            color: #777;
+            margin-bottom: 20px;
+            font-size: 0.8rem;
+            /* Descrição curta e pequena */
         }
 
-        /* Botão mais delicado */
+        /* Botão Slim */
         .btn-whatsapp {
             background-color: #128c7e;
             color: white;
             text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 6px;
+            padding: 10px 15px;
+            border-radius: 4px;
             text-align: center;
             font-weight: 700;
-            font-size: 0.9rem;
-            display: flex;
+            font-size: 0.8rem;
+            display: inline-flex;
+            /* Não ocupa a largura toda se não precisar */
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
+            width: 100%;
+            /* Mantém 100% no mobile para facilitar clique */
+            box-sizing: border-box;
         }
 
-        /* AJUSTES ESPECÍFICOS PARA O CELULAR */
+        /* AJUSTES FINOS PARA O CELULAR */
         @media (max-width: 768px) {
             .container-detalhe {
                 margin: 0;
-                /* Encosta levemente nas bordas para ganhar espaço */
-                border-radius: 0;
-                /* Estilo mobile app */
-                padding: 15px;
-                gap: 15px;
+                padding: 12px;
+                gap: 10px;
             }
 
             .produto-imagem-foco {
-                max-width: 250px;
-                /* Foto menor no celular */
+                max-width: 220px;
+                /* Foto pequena para caber tudo na primeira dobra */
             }
 
             h1 {
-                font-size: 1.4rem;
-                text-align: center;
+                font-size: 1.2rem;
             }
 
             .preco-destaque {
-                font-size: 1.2rem;
-                text-align: center;
-                margin-bottom: 10px;
+                font-size: 1.1rem;
+                margin-bottom: 8px;
             }
 
             .descricao {
-                text-align: center;
-                font-size: 0.85rem;
-                margin-bottom: 20px;
+                font-size: 0.75rem;
+                margin-bottom: 15px;
             }
 
-            .material-tag {
+            .produto-info {
                 text-align: center;
             }
         }
-    </style>
     </style>
 </head>
 
