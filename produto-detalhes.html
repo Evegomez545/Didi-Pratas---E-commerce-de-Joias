@@ -184,14 +184,13 @@
     </main>
 
     <script>
-        // Lógica para pegar os dados da URL
+        
         const urlParams = new URLSearchParams(window.location.search);
         const nome = urlParams.get('nome') || "Joia Exclusiva";
         const preco = urlParams.get('preco') || "Consulte";
         const img = urlParams.get('img') || "img/logo2.png";
         const desc = urlParams.get('desc');
 
-        // Preenche os campos na página
         document.getElementById('nome-dinamico').innerText = nome;
         document.getElementById('preco-dinamico').innerText = 'R$ ' + preco;
         document.getElementById('foto-dinamica').src = img;
@@ -204,11 +203,22 @@
             elementoDescricao.innerText = "Joia em Prata 925 com acabamento premium, brilho eterno e garantia de autenticidade.";
         }
 
-        // Configura o link do WhatsApp com mensagem automática
+       
+        const numeroDidi = "5521981404612"; 
         const mensagem = `Olá Didi Pratas! Gostaria de mais informações sobre: ${nome} (R$ ${preco})`;
-        document.getElementById('link-whats').href = `https://wa.me/21981404612?text=${encodeURIComponent(mensagem)}`;
-    </script>
+        const linkFinal = `https://wa.me/${numeroDidi}?text=${encodeURIComponent(mensagem)}`;
 
+        const botaoWhats = document.getElementById('link-whats');
+        botaoWhats.href = linkFinal;
+
+        // Garante que no celular o clique funcione forçado
+        botaoWhats.addEventListener('click', function (e) {
+            if (window.innerWidth < 768) {
+                e.preventDefault();
+                window.location.href = linkFinal;
+            }
+        });
+    </script>
 </body>
 
 </html>
