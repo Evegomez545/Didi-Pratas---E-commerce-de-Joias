@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Didi Pratas | Joias em Prata 925</title>
+</head>
+
+<body>
+
+
+    <header class="header-principal">
+        <div class="header-container">
+            <div class="header-left">
+                <div class="menu-toggle" onclick="document.querySelector('.sidebar').classList.add('active')">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="logo-img">
+                    <a href="index.html">
+                        <img src="img/logo2.png" alt="Didi Pratas">
+                    </a>
+                </div>
+            </div>
+
+            <nav class="menu-fixo">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#mais-vendidos">PRODUTOS</a></li>
+                    <li><a href="#rodape-profissional">CONTATOS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <nav class="categorias-container">
+        <ul class="categorias-lista">
+            <li><a href="#" data-filter="all">TODOS</a></li>
+            <li><a href="#" data-filter="religiosos">RELIGIOSOS</a></li>
+            <li><a href="#" data-filter="cristais">CRISTAIS</a></li>
+            <li><a href="#" data-filter="minimalistas">MINIMALISTAS</a></li>
+            <li><a href="#" data-filter="pedrarias">PEDRARIAS</a></li>
+        </ul>
+    </nav>
+
+    <div class="sidebar">
+        <div class="close-menu" onclick="document.querySelector('.sidebar').classList.remove('active')">×</div>
+        <h3 class="titulo-menu">Categorias</h3>
+        <ul>
+            <li><a href="#brincos" onclick="fecharMenu()">Brincos</a></li>
+            <li><a href="#aneis" onclick="fecharMenu()">Anéis</a></li>
+            <li><a href="#cordoes" onclick="fecharMenu()">Cordões</a></li>
+            <li><a href="#pulseiras" onclick="fecharMenu()">Pulseiras</a></li>
+            <li><a href="#tornozeleiras" onclick="fecharMenu()">Tornozeleiras</a></li>
+
+        </ul>
+    </div>
+
+    <section class="banner-principal">
+        <div class="banner-conteudo">
+            <span class="tag-promo">Promoção</span>
+            <h1>NOSSAS PRATAS</h1>
+            <p>Joias que contam histórias</p>
+            <a href="#mais-vendidos" class="btn-confira">Confira</a>
+        </div>
+    </section>
+
+
+    <main class="container">
+
+        <div id="mensagem-vazia"
+            style="display: none; text-align: center; padding: 50px; font-family: 'Playfair Display', serif;">
+            <i class="fas fa-gem" style="font-size: 3rem; color: #ccc; margin-bottom: 20px;"></i>
+            <h3 style="color: #666;">Em breve novidades nesta categoria!</h3>
+            <p style="color: #999;">Estamos preparando peças exclusivas para você.</p>
+        </div>
+
+
+        <section id="lancamentos" class="secao-produtos">
+            <h2 class="titulo-secao">Novidades da Semana</h2>
+            <div class="grid-produtos">
+
+                <div class="card-prata">
+                    <div class="img-container">
+                        <img src="img/lancamento1.jpg" alt="novidades">
+                    </div>
+                    <h3>Tendência em jóias para seu final de ano</h3>
+                    <span class="preco">R$ 00,00</span>
+                    <a href="produto-detalhes.html?nome=Tendência em jóias para seu final de ano&preco=00,00&img=img/lancamento1.jpg&desc=Uma joia exclusiva pensada para brilhar nas suas festas de fim de ano. Prata 925 com acabamento de luxo."
+                        target="_blank" class="btn-comprar">Eu quero este</a>
+                    <div class="status-estoque">
+                        <i class="fas fa-bolt"></i> NOVIDADE
+                    </div>
+                </div>
+
+                <div class="card-prata religiosos">
+                    <div class="img-container">
+                        <img src="img/lancamento2.jpg" alt="novidades">
+                    </div>
+                    <h3>Proteção em cada passo para todos os dias</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Proteção em cada passo para todos os dias&preco=00,00&img=img/lancamento2.jpg&desc=Uma joia religiosa especial para trazer proteção e brilho ao seu dia a dia em Prata 925."
+                        target="_blank" class="btn-comprar">Eu quero este</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-bolt"></i> NOVIDADE
+                    </div>
+                </div>
+
+                <div class="card-prata">
+                    <div class="img-container">
+                        <img src="img/lancamento3.jpg" alt="novidades">
+                    </div>
+                    <h3>Lançamento do verão onde o sol encontra a moda</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Lançamento do verão onde o sol encontra a moda&preco=00,00&img=img/lancamento3.jpg&desc=Uma joia solar e vibrante da nossa coleção de verão, feita em Prata 925 para brilhar em todos os momentos."
+                        target="_blank" class="btn-comprar">Eu quero este</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-bolt"></i> NOVIDADE
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="divisor-sutil">
+
+        <section id="mais-vendidos" class="secao-produtos">
+            <h2 class="titulo-secao">Mais Vendidos</h2>
+            <div class="grid-produtos">
+
+
+                <div class="card-prata">
+                    <div class="img-container">
+                        <a
+                            href="produto-detalhes.html?nome=Colar Beija-Flor Astral&preco=00,00&img=img/colar-passaro.jpg&desc=Um colar delicado em Prata 925 com pingente de beija-flor, simbolizando leveza e boas energias.">
+                            <img src="img/colar-passaro.jpg" alt="colar">
+                        </a>
+                    </div>
+                    <h3>Colar Beija-Flor Astral</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Colar Beija-Flor Astral&preco=00,00&img=img/colar-passaro.jpg&desc=Um colar delicado em Prata 925 com pingente de beija-flor, simbolizando leveza e boas energias."
+                        class="btn-comprar">Comprar Agora</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> DISPONÍVEL EM ESTOQUE
+                    </div>
+                </div>
+
+
+                <div class="card-prata">
+                    <div class="img-container">
+                        <a
+                            href="produto-detalhes.html?nome=Combo Anéis Moeda Antiga&preco=00,00&img=img/aneis.jpg&desc=Lindo combo de anéis em moeda antiga com brilho eterno e alta durabilidade.">
+                            <img src="img/aneis.jpg" alt="Combo Aliança">
+                        </a>
+                    </div>
+
+                    <h3>Combo Anéis Moeda Antiga</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Combo Anéis Moeda Antiga&preco=00,00&img=img/aneis.jpg&desc=Lindo combo de anéis em moeda antiga com brilho eterno e alta durabilidade."
+                        class="btn-comprar">Comprar Agora</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+
+                <div class="card-prata">
+                    <div class="img-container">
+                        <a
+                            href="produto-detalhes.html?nome=Argolas Geométricas e Elegantes&preco=00,00&img=img/argola.jpg&desc=Argolas em Prata 925 com design geométrico moderno, perfeitas para um visual sofisticado e leve.">
+                            <img src="img/argola.jpg" alt="Argolas">
+                        </a>
+                    </div>
+
+                    <h3>Argolas Geométricas e Elegantes</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Argolas Geométricas e Elegantes&preco=00,00&img=img/argola.jpg&desc=Argolas em Prata 925 com design geométrico moderno, perfeitas para um visual sofisticado e leve."
+                        class="btn-comprar">Comprar Agora</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="aneis" class="secao-produtos">
+            <h2 class="titulo-secao">Anéis em Prata 925</h2>
+            <div class="grid-produtos">
+
+                <div class="card-prata">
+                    <div class="img-container">
+                        <a
+                            href="produto-detalhes.html?nome=Anel Triplo Fios Lisos em Prata&preco=00,00&img=img/aneis-prata.jpg&desc=Anel triplo com fios lisos em Prata 925. Um design moderno e sofisticado que preenche o dedo com elegância e brilho legítimo.">
+                            <img src="img/aneis-prata.jpg" alt="Anel Triplo">
+                        </a>
+                    </div>
+
+                    <h3>Anel Triplo Fios Lisos em Prata</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Anel Triplo Fios Lisos em Prata&preco=00,00&img=img/aneis-prata.jpg&desc=Anel triplo com fios lisos em Prata 925. Um design moderno e sofisticado que preenche o dedo com elegância e brilho legítimo."
+                        class="btn-comprar">Comprar Agora</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+
+
+
+                <div class="card-prata">
+                    <div class="img-container">
+                        <a
+                            href="produto-detalhes.html?nome=Mix de Anéis Astral&preco=00,00&img=img/Mix-Anéis-Astral.jpg&desc=Um conjunto celestial em Prata 925. O Mix Astral combina diferentes texturas e símbolos para um visual místico e cheio de personalidade.">
+                            <img src="img/Mix-Anéis-Astral.jpg" alt="Mix de Anéis Astral">
+                        </a>
+                    </div>
+
+                    <h3>Mix de Anéis Astral</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Mix de Anéis Astral&preco=00,00&img=img/Mix-Anéis-Astral.jpg&desc=Um conjunto celestial em Prata 925. O Mix Astral combina diferentes texturas e símbolos para um visual místico e cheio de personalidade."
+                        class="btn-comprar">Comprar Agora</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+
+
+                <div class="card-prata">
+                    <div class="img-container">
+                        <a
+                            href="produto-detalhes.html?nome=Anéis Geométricos e Reguláveis&preco=00,00&img=img/Aneis-geométricos-reguláveis.jpg&desc=Anéis modernos com design geométrico em Prata 925. Por serem reguláveis, oferecem o ajuste perfeito e muito conforto para qualquer ocasião.">
+                            <img src="img/Aneis-geométricos-reguláveis.jpg" alt="Anéis Geométricos">
+                        </a>
+                    </div>
+
+                    <h3>Anéis Geométricos e Reguláveis</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Anéis Geométricos e Reguláveis&preco=00,00&img=img/Aneis-geométricos-reguláveis.jpg&desc=Anéis modernos com design geométrico em Prata 925. Por serem reguláveis, oferecem o ajuste perfeito e muito conforto para qualquer ocasião."
+                        class="btn-comprar">Comprar Agora</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="pulseiras" class="secao-produtos">
+            <h2 class="titulo-secao">Pulseiras</h2>
+            <div class="grid-produtos">
+
+
+                <div class="card-prata">
+                    <div class="img-container">
+                        <a
+                            href="produto-detalhes.html?nome=Pulseira Riviera Zircônias Prata&preco=00,00&img=img/pulseira.jpg&desc=Pulseira modelo Riviera em Prata 925 legítima, cravejada com zircônias de alto brilho. Um clássico da joalheria que traz sofisticação e elegância para qualquer ocasião.">
+                            <img src="img/pulseira.jpg" alt="Pulseira Riviera">
+                        </a>
+                    </div>
+
+                    <h3>Pulseira Riviera Zircônias Prata</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Pulseira Riviera Zircônias Prata&preco=00,00&img=img/pulseira.jpg&desc=Pulseira modelo Riviera em Prata 925 legítima, cravejada com zircônias de alto brilho. Um clássico da joalheria que traz sofisticação e elegância para qualquer ocasião."
+                        class="btn-comprar">Comprar Agora</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+
+
+
+                <div class="card-prata religiosos">
+                    <div class="img-container">
+                        <a
+                            href="produto-detalhes.html?nome=Mix de Pulseiras Proteção e Fé&preco=00,00&img=img/pulseira2.jpg&desc=Um conjunto poderoso que une estilo e espiritualidade. Este mix em Prata 925 traz símbolos de proteção e fé para te acompanhar com brilho e significado em todos os momentos.">
+                            <img src="img/pulseira2.jpg" alt="Mix de Pulseiras">
+                        </a>
+                    </div>
+
+                    <h3>Mix de Pulseiras Proteção e Fé</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Mix de Pulseiras Proteção e Fé&preco=00,00&img=img/pulseira2.jpg&desc=Um conjunto poderoso que une estilo e espiritualidade. Este mix em Prata 925 traz símbolos de proteção e fé para te acompanhar com brilho e significado em todos os momentos."
+                        class="btn-comprar">Comprar Agora</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+
+
+
+                <div class="card-prata cristais">
+                    <div class="img-container">
+                        <a
+                            href="produto-detalhes.html?nome=Pulseira Veneziana Cristal Gota Sky&preco=00,00&img=img/pulseira3.jpg&desc=Pulseira em malha Veneziana de Prata 925 com um deslumbrante cristal em formato de gota na cor Sky. Uma peça delicada que traz um ponto de cor e sofisticação ao seu pulso.">
+                            <img src="img/pulseira3.jpg" alt="Pulseira Veneziana Cristal">
+                        </a>
+                    </div>
+
+                    <h3>Pulseira Veneziana Cristal Gota Sky</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Pulseira Veneziana Cristal Gota Sky&preco=00,00&img=img/pulseira3.jpg&desc=Pulseira em malha Veneziana de Prata 925 com um deslumbrante cristal em formato de gota na cor Sky. Uma peça delicada que traz um ponto de cor e sofisticação ao seu pulso."
+                        class="btn-comprar">Comprar Agora</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <section id="cordoes" class="secao-produtos">
+            <h2 class="titulo-secao">Cordões e Colares</h2>
+            <div class="grid-produtos">
+
+
+                <div class="card-prata">
+                    <div class="img-container">
+                        <a
+                            href="produto-detalhes.html?nome=Colar Patuá Búzios Naturais&preco=00,00&img=img/colar.jpg&desc=Colar estilo Patuá em Prata 925 com búzios naturais selecionados. Uma peça com energia praiana e acabamento impecável, perfeita para compor mixes de colares.">
+                            <img src="img/colar.jpg" alt="Colar Patuá">
+                        </a>
+                    </div>
+
+                    <h3>Colar Patuá Búzios Naturais</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Colar Patuá Búzios Naturais&preco=00,00&img=img/colar.jpg&desc=Colar estilo Patuá em Prata 925 com búzios naturais selecionados. Uma peça com energia praiana e acabamento impecável, perfeita para compor mixes de colares."
+                        class="btn-comprar">Comprar Agora</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+
+
+
+                <div class="card-prata">
+                    <div class="img-container">
+                        <a
+                            href="produto-detalhes.html?nome=Colar Amuleto Olho Grego&preco=00,00&img=img/colar-olho.jpg&desc=Um poderoso amuleto em Prata 925 legítima. Este colar une a proteção do olho grego com um design minimalista e elegante, ideal para uso diário ou para presentear alguém especial.">
+                            <img src="img/colar-olho.jpg" alt="Colar Olho Grego">
+                        </a>
+                    </div>
+
+                    <h3>Colar Amuleto Olho Grego</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Colar Amuleto Olho Grego&preco=00,00&img=img/colar-olho.jpg&desc=Um poderoso amuleto em Prata 925 legítima. Este colar une a proteção do olho grego com um design minimalista e elegante, ideal para uso diário ou para presentear alguém especial."
+                        class="btn-comprar">Comprar Agora</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+
+
+
+                <div class="card-prata">
+                    <div class="img-container">
+                        <a
+                            href="produto-detalhes.html?nome=Choker lacraia 35+5cm.&preco=00,00&img=img/Choker-lacraia35+5cm..jpg&desc=Choker modelo lacraia em Prata 925 legítima. Com 35cm de comprimento e extensor de 5cm para o ajuste perfeito, é uma peça que brilha intensamente e destaca o colo com elegância.">
+                            <img src="img/Choker-lacraia35+5cm..jpg" alt="Choker lacraia">
+                        </a>
+                    </div>
+
+                    <h3>Choker lacraia 35+5cm.</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Choker lacraia 35+5cm.&preco=00,00&img=img/Choker-lacraia35+5cm..jpg&desc=Choker modelo lacraia em Prata 925 legítima. Com 35cm de comprimento e extensor de 5cm para o ajuste perfeito, é uma peça que brilha intensamente e destaca o colo com elegância."
+                        class="btn-comprar">Comprar Agora</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <section id="brincos" class="secao-produtos">
+            <h2 class="titulo-secao">Brincos</h2>
+            <div class="grid-produtos">
+
+
+                <div class="card-prata">
+                    <div class="img-container">
+                        <a
+                            href="produto-detalhes.html?nome=Brinco Argola Geométrica Triângulo&preco=00,00&img=img/brincos.jpg&desc=Brincos em formato de argola geométrica triangular em Prata 925 legítima. Um design moderno e minimalista que traz um toque contemporâneo e sofisticado para qualquer look.">
+                            <img src="img/brincos.jpg" alt="Brinco Argola Geométrica">
+                        </a>
+                    </div>
+
+                    <h3>Brinco Argola Geométrica Triângulo.</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Brinco Argola Geométrica Triângulo&preco=00,00&img=img/brincos.jpg&desc=Brincos em formato de argola geométrica triangular em Prata 925 legítima. Um design moderno e minimalista que traz um toque contemporâneo e sofisticado para qualquer look."
+                        class="btn-comprar">Comprar Agora</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+
+
+
+                <div class="card-prata">
+                    <div class="img-container">
+                        <a
+                            href="produto-detalhes.html?nome=Brincos Prata Clássicos e Atemporais&preco=00,00&img=img/brincos1.jpg&desc=Brincos essenciais em Prata 925 legítima. Com design limpo e brilho eterno, são peças versáteis que combinam com qualquer estilo, do casual ao elegante, sendo indispensáveis no seu porta-joias.">
+                            <img src="img/brincos1.jpg" alt="Brincos Clássicos">
+                        </a>
+                    </div>
+
+                    <h3>Brincos Prata Clássicos e Atemporais.</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Brincos Prata Clássicos e Atemporais&preco=00,00&img=img/brincos1.jpg&desc=Brincos essenciais em Prata 925 legítima. Com design limpo e brilho eterno, são peças versáteis que combinam com qualquer estilo, do casual ao elegante, sendo indispensáveis no seu porta-joias."
+                        class="btn-comprar">Comprar Agora</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+
+
+
+                <div class="card-prata">
+                    <div class="img-container">
+                        <a
+                            href="produto-detalhes.html?nome=Brincos Prata Geometria de Proteção&preco=00,00&img=img/brinco2.jpg&desc=Brincos em Prata 925 com design geométrico exclusivo. Uma peça que une o simbolismo da proteção com a modernidade das formas, criando um acessório marcante e cheio de significado para o seu dia a dia.">
+                            <img src="img/brinco2.jpg" alt="Brincos Geometria de Proteção">
+                        </a>
+                    </div>
+
+                    <h3>Brincos Pratas Geometria de Proteção.</h3>
+                    <span class="preco">R$ 00,00</span>
+
+                    <a href="produto-detalhes.html?nome=Brincos Prata Geometria de Proteção&preco=00,00&img=img/brinco2.jpg&desc=Brincos em Prata 925 com design geométrico exclusivo. Uma peça que une o simbolismo da proteção com a modernidade das formas, criando um acessório marcante e cheio de significado para o seu dia a dia."
+                        class="btn-comprar">Comprar Agora</a>
+
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="tornozeleiras" class="secao-produtos">
+            <h2 class="titulo-secao">Tornozeleiras</h2>
+            <div class="grid-produtos">
+
+
+                <div class="card-prata minimalistas">
+                    <div class="img-container">
+                        <a href="produto-detalhes.html?nome=Tornozeleira Dupla Snake & Chevron&preco=00,00&img=img/tornozeleira1.jpg"
+                            target="_blank">
+                            <img src="img/tornozeleira1.jpg" alt="Tornozeleira Dupla">
+                        </a>
+                    </div>
+                    <h3>Tornozeleira Dupla Snake & Chevron</h3>
+                    <span class="preco">R$ 00,00</span>
+                    <a href="produto-detalhes.html?nome=Tornozeleira Dupla Snake & Chevron&preco=00,00&img=img/tornozeleira1.jpg"
+                        target="_blank" class="btn-comprar">Comprar Agora</a>
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+
+                <div class="card-prata minimalistas">
+                    <div class="img-container">
+                        <a href="produto-detalhes.html?nome=Tornozeleira Amuleto Faith (Fé)&preco=00,00&img=img/tornozeleira2.jpg"
+                            target="_blank">
+                            <img src="img/tornozeleira2.jpg" alt="Tornozeleira Amuleto">
+                        </a>
+                    </div>
+                    <h3>Tornozeleira Amuleto Faith (Fé)</h3>
+                    <span class="preco">R$ 00,00</span>
+                    <a href="produto-detalhes.html?nome=Tornozeleira Amuleto Faith (Fé)&preco=00,00&img=img/tornozeleira2.jpg"
+                        target="_blank" class="btn-comprar">Comprar Agora</a>
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+
+                <div class="card-prata minimalistas">
+                    <div class="img-container">
+                        <a href="produto-detalhes.html?nome=Tornozeleira Marítima Aqua & Medalhas&preco=00,00&img=img/tornozeleira3.jpg"
+                            target="_blank">
+                            <img src="img/tornozeleira3.jpg" alt="Tornozeleira Marítima">
+                        </a>
+                    </div>
+                    <h3>Tornozeleira Marítima Aqua & Medalhas</h3>
+                    <span class="preco">R$ 00,00</span>
+                    <a href="produto-detalhes.html?nome=Tornozeleira Marítima Aqua & Medalhas&preco=00,00&img=img/tornozeleira3.jpg"
+                        target="_blank" class="btn-comprar">Comprar Agora</a>
+                    <div class="status-estoque">
+                        <i class="fas fa-check-circle"></i> Disponível em Estoque
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="secao-cuidados">
+            <div class="container-cuidados">
+                <h2 class="titulo-secao">Por que escolher nossas joias?</h2>
+                <p class="subtitulo">Uma das vantagens das joias de prata é que elas <strong>duram a vida toda</strong>.
+                </p>
+                <hr class="divisor-sutil">
+                <h2 class="titulo-secao">Cuidados com as Pratas</h2>
+                <div class="grid-cuidados">
+                    <div class="card-cuidado">
+                        <i class="fas fa-flask"></i>
+                        <h3>Produtos Químicos</h3>
+                        <p>Evite contato com produtos de limpeza e cosméticos.</p>
+                    </div>
+                    <div class="card-cuidado">
+                        <i class="fas fa-dumbbell"></i>
+                        <h3>Esforço Físico</h3>
+                        <p>Evite levantar objetos pesados que possam deformar a peça.</p>
+                    </div>
+                    <div class="card-cuidado">
+                        <i class="fas fa-bed"></i>
+                        <h3>Ao Dormir</h3>
+                        <p>Retire seus acessórios antes de dormir para evitar quebras.</p>
+                    </div>
+                    <div class="card-cuidado">
+                        <i class="fas fa-tint-slash"></i>
+                        <h3>Local Seco</h3>
+                        <p>Mantenha em local seco e limpe regularmente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="rodape-profissional" class="rodape-profissional">
+        <div class="footer-container">
+            <div class="footer-info">
+                <img src="img/didipratas.png" alt="Didi Pratas" class="logo-footer">
+                <p>Joias em prata 925 com garantia exclusiva.</p>
+            </div>
+
+            <div class="footer-contato">
+                <h3>Compre por telefone</h3>
+                <p>(21) 98140-4612</p>
+                <h3>Envie uma mensagem</h3>
+                <p>Nalair98@gmail.com</p>
+            </div>
+
+            <div class="footer-horario">
+                <h3>Horário de Atendimento</h3>
+                <p>Seg à Quinta das 09h as 17h.</p>
+                <p>Sexta à domingo das 09h as 16h.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Garantia e Trocas</h3>
+                <p><strong>Prazo de Troca:</strong> 30 dias após o recebimento.</p>
+                <p>A garantia não cobre quebra ou perda de pedras.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Função para o Menu Lateral fechar sozinho
+        function fecharMenu() {
+            const sidebar = document.querySelector('.sidebar');
+            if (sidebar) {
+                sidebar.classList.remove('active');
+            }
+        }
+
+        // 2. Todo o seu sistema de Filtros e Categorias
+        document.addEventListener('DOMContentLoaded', function () {
+            const linksFiltro = document.querySelectorAll('.categorias-lista a');
+            const cards = document.querySelectorAll('.card-prata');
+            const secoes = document.querySelectorAll('.secao-produtos');
+            const divisores = document.querySelectorAll('.divisor-sutil');
+            const mensagemVazia = document.getElementById('mensagem-vazia');
+
+            linksFiltro.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const filtro = this.getAttribute('data-filter');
+                    let totalVisivel = 0;
+
+                    // Filtrar os Cards
+                    cards.forEach(card => {
+                        if (filtro === 'all' || card.classList.contains(filtro)) {
+                            card.style.display = 'block';
+                            totalVisivel++;
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+
+                    // Controlar Seções e Divisores
+                    secoes.forEach(secao => {
+                        const temCardNestaSecao = Array.from(secao.querySelectorAll('.card-prata'))
+                            .some(c => c.style.display === 'block');
+                        secao.style.display = temCardNestaSecao ? 'block' : 'none';
+                    });
+
+                    divisores.forEach(hr => {
+                        hr.style.display = (filtro === 'all') ? 'block' : 'none';
+                    });
+
+                    // Mensagem de "Em breve"
+                    if (mensagemVazia) {
+                        mensagemVazia.style.display = (totalVisivel === 0) ? 'block' : 'none';
+                    }
+
+                    // Rola para a vitrine
+                    window.scrollTo({ top: 400, behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
