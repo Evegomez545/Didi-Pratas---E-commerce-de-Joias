@@ -517,11 +517,10 @@ header {
     opacity: 0.3;
 }
 
-#mais-vendidos .titulo-secao {
+.mais-vendidos .titulo-secao {
     margin-top: 10px;
 
 }
-
 
 .categorias-container {
     width: 100%;
@@ -670,18 +669,15 @@ header {
 }
 
 /* ============================================================
-   CONFIGURAÇÃO ESPECIAL PARA CELULAR (DIDI PRATAS)
+   CONFIGURAÇÃO ESPECIAL PARA CELULAR (DIDI PRATAS) - UNIFICADO
    ============================================================ */
 
 @media (max-width: 768px) {
-
-
 
     /* 1. HEADER E LOGO */
     .header-container {
         display: flex !important;
         justify-content: space-between !important;
-        /* Isso empurra os links para a ponta direita */
         align-items: center !important;
         padding: 5px 15px !important;
     }
@@ -689,44 +685,39 @@ header {
     .logo-img img {
         width: 120px !important;
         display: block !important;
-        
-        /* Logo menor para não apertar o menu */
     }
 
     .menu-fixo {
-        display: block !important; /* MUDAMOS DE NONE PARA BLOCK */
+        display: block !important;
     }
-    
+
     .menu-fixo ul {
         display: flex !important;
-        flex-direction: column !important; 
-        align-items: flex-end !important; 
-        gap: 2px !important; 
+        flex-direction: column !important;
+        align-items: flex-end !important;
+        gap: 2px !important;
         padding: 0 !important;
         margin: 0 !important;
         list-style: none !important;
     }
 
     .menu-fixo ul li a {
-        font-size: 9px !important; /* Aumentei 1px para ler melhor */
+        font-size: 9px !important;
         font-weight: 700 !important;
         color: #333 !important;
         text-transform: uppercase !important;
         letter-spacing: 0.5px !important;
-        line-height: 1.2 !important; 
+        line-height: 1.2 !important;
         text-decoration: none !important;
     }
 
-    
     .header-left {
-        flex: 1 !important; 
+        flex: 1 !important;
         display: flex !important;
         align-items: center !important;
     }
 
-
-
-    
+    /* 2. CATEGORIAS */
     .categorias-container {
         overflow-x: auto !important;
         justify-content: flex-start !important;
@@ -740,20 +731,17 @@ header {
 
     .categorias-lista li a {
         white-space: nowrap !important;
-        /* Impede que as palavras quebrem */
         font-size: 12px !important;
     }
 
-    /* 3. BANNER PRINCIPAL (Ajuste de Altura e Texto) */
+    /* 3. BANNER PRINCIPAL */
     .banner-principal {
         height: 350px !important;
-        /* Menor para o usuário ver os produtos logo abaixo */
         padding-left: 0 !important;
         justify-content: center !important;
         text-align: center !important;
         background-position: center !important;
         animation: none !important;
-        /* Desativa zoom no mobile para evitar bugs visuais */
     }
 
     .banner-conteudo {
@@ -768,139 +756,130 @@ header {
         font-size: 14px !important;
     }
 
-    /* 4. VITRINE DE PRODUTOS (2 POR LINHA) */
+    /* 4. TÍTULOS E SUBTÍTULOS (Ajuste de espaço para tirar o vácuo) */
+    .titulo-secao, 
+    section h2, 
+    .titulo-cuidados {
+        font-size: 18px !important;
+        margin-top: 10px !important; /* Diminuído para colar na seção anterior */
+        margin-bottom: 10px !important; /* Espaço sutil antes dos produtos */
+        padding-bottom: 0 !important;
+        text-align: center !important;
+        font-weight: 700 !important;
+        color: #333 !important;
+        display: block !important;
+    }
+
+    .subtitulo {
+        font-size: 13px !important;
+        padding: 0 20px !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* 5. VITRINE DE PRODUTOS (Carrossel Horizontal) */
     .grid-produtos {
-        grid-template-columns: repeat(2, 1fr) !important;
-        /* A mágica do 2x2 */
-        gap: 12px !important;
-        padding: 0 12px !important;
-        margin: 20px auto !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 8px !important;
+        padding: 0 15px 10px 15px !important; 
+        margin: 0 auto !important; /* Zerei as margens para tirar o vácuo */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .grid-produtos::-webkit-scrollbar {
+        display: none;
     }
 
     .card-prata {
-        padding: 10px !important;
+        flex: 0 0 45% !important;
+        scroll-snap-align: start !important;
+        max-width: 200px !important;
+        padding: 8px !important;
     }
 
     .img-container {
         height: 130px !important;
-        /* Altura fixa para as fotos não ficarem gigantes */
     }
 
     .card-prata h3 {
         font-size: 11px !important;
         min-height: 30px !important;
-        /* Alinha os botões horizontalmente */
-        margin-bottom: 10px !important;
+        margin-bottom: 5px !important;
     }
 
     .preco {
-        font-size: 16px !important;
-        margin-bottom: 10px !important;
+        font-size: 15px !important;
+        margin-bottom: 8px !important;
     }
 
     .btn-comprar {
-        padding: 10px 5px !important;
-        font-size: 12px !important;
+        padding: 8px 5px !important;
+        font-size: 11px !important;
     }
 
-    .status-estoque {
-        font-size: 9px !important;
-        gap: 4px !important;
+    /* 6. SEÇÃO DE CUIDADOS (2 por linha) */
+    .grid-cuidados {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        padding: 0 15px !important;
+        margin-top: 0 !important;
+        overflow-x: hidden !important;
     }
-
-    /* 5. RODAPÉ (Footer) */
-    .footer-container {
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-    }
-
-    .footer-info {
-        max-width: 100% !important;
-        text-align: center !important;
-    }
-}
-
-/* ============================================================
-   AJUSTES FINAIS: CUIDADOS E RODAPÉ (MOBILE)
-   ============================================================ */
-
-@media (max-width: 768px) {
-
-    /* 1. Seção de Cuidados */
-    .grid-produtos {
-        display: flex !important; 
-        flex-wrap: nowrap !important; /* Força todos na mesma linha */
-        overflow-x: auto !important; 
-        scroll-snap-type: x mandatory !important; 
-        gap: 10px !important; /* Espaço entre as joias */
-        padding: 10px 15px !important;
-        -webkit-overflow-scrolling: touch; 
-    }
-
-    .card-prata {
-        /* 45% garante que caibam 2 e sobre 10% de espaço (o pedacinho do próximo) */
-        flex: 0 0 45% !important; 
-        scroll-snap-align: start !important; 
-        max-width: 200px !important;
-        padding: 8px !important;
-    }
-
-    /* Esconde a barra de rolagem para ficar mais limpo */
-    .grid-produtos::-webkit-scrollbar {
-        display: none;
-    }
-
-
 
     .card-cuidado {
-        padding: 20px 10px !important;
+        width: 100% !important;
+        padding: 15px 10px !important;
+        margin: 0 !important;
     }
 
     .card-cuidado i {
-        font-size: 24px !important;
-        /* Ícones um pouco menores no celular */
+        font-size: 22px !important;
     }
 
     .card-cuidado h3 {
-        font-size: 14px !important;
+        font-size: 13px !important;
     }
 
     .card-cuidado p {
-        font-size: 12px !important;
+        font-size: 11px !important;
     }
 
-    /* 2. Rodapé Profissional */
+    /* 7. RODAPÉ */
     .rodape-profissional {
-        padding: 40px 0 !important;
+        padding: 30px 0 !important;
         text-align: center !important;
-        /* Centraliza tudo no celular */
     }
 
     .footer-container {
         flex-direction: column !important;
-        /* Empilha as colunas */
         align-items: center !important;
-        gap: 30px !important;
+        gap: 20px !important;
     }
 
-    .footer-info,
-    .footer-contato,
-    .footer-horario,
-    .footer-col {
+    .footer-info, .footer-contato, .footer-horario, .footer-col {
         width: 100% !important;
         max-width: 100% !important;
         text-align: center !important;
-        /* Garante o texto no meio */
     }
 
     .logo-footer {
-        margin: 0 auto 15px auto !important;
-        /* Centraliza a logo do rodapé */
+        margin: 0 auto 10px auto !important;
     }
 
-    .footer-container h3 {
-        margin-top: 10px !important;
-        font-size: 13px !important;
+    /* Ajuste para o texto de estoque ficar pequeno e discreto */
+    .status-estoque {
+        font-size: 9px !important;  /* Letra bem pequena */
+        gap: 4px !important;        /* Aproxima o ícone do texto */
+        margin-top: 5px !important;
+        justify-content: center !important;
+        opacity: 0.8 !important;    /* Deixa a cor levemente mais suave */
+    }
+
+    /* Caso o ícone (bolinha ou check) também esteja grande */
+    .status-estoque i {
+        font-size: 8px !important;
     }
 }
