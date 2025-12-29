@@ -264,25 +264,45 @@ header {
 }
 
 .grid-produtos {
-    display: grid;
-    /* Força exatamente 3 colunas de tamanhos iguais */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    /* Espaço entre as joias */
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 25px !important;           /* Espaço entre os cards */
+    padding: 20px 5% !important;  /* O padding lateral ajuda a centralizar */
+    margin: 0 auto !important;
+    width: 100% !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    justify-content: flex-start !important;
 }
 
+.grid-produtos::-webkit-scrollbar {
+    height: 8px !important;
+    display: block !important; /* Mude para 'none' depois que testar e gostar */
+}
+.grid-produtos::-webkit-scrollbar-thumb {
+    background: #d1d1d1 !important;
+    border-radius: 10px !important;
+}
+
+
+
 .card-prata {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
+    /* 100% / 3.4 cria 3 espaços e sobra o pedaço da 4ª imagem certinho */
+    flex: 0 0 calc(100% / 3.4) !important; 
+    min-width: 280px !important;    
+    scroll-snap-align: center !important; 
+    
+    /* GARANTE QUE O CONTEÚDO DENTRO DO CARD FIQUE NO MEIO */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; 
+    text-align: center !important;
     background: #fff;
-    border-radius: 8px;
-    border: 1px solid #eee;
-    text-align: center;
+    padding: 15px !important;
+    box-sizing: border-box !important;
 }
 
 /* Seleciona o título dentro do card */
@@ -619,16 +639,30 @@ header {
     display: block;
 }
 
-/* ajusta o botão do WhatsApp para não ser um quadrado enorme */
+
 .btn-whatsapp {
     font-size: 13px !important;
-    /* Letra bem menor */
-    padding: 8px 18px !important;
-    /* Botão mais fino */
+    padding: 10px 20px !important;
     max-width: fit-content !important;
-    /* Impede que ele ocupe a largura toda */
     display: inline-flex !important;
+    align-items: center !important;
     gap: 8px !important;
+    background-color: #346445 !important; /* Cor padrão do WhatsApp */
+    color: #fff !important;
+    text-decoration: none !important;
+    border-radius: 5px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    
+    /* A MÁGICA DA ANIMAÇÃO AQUI */
+    transition: all 0.3s ease-in-out !important; 
+}
+
+/* Efeito ao passar o mouse */
+.btn-whatsapp:hover {
+    background-color: #128c7e !important; /* Escurece o verde ao passar o mouse */
+    transform: scale(1.05) !important;      /* Dá um leve zoom profissional */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
 }
 
 .btn-whatsapp i {
