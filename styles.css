@@ -825,7 +825,7 @@ header {
         display: none;
     }
 
-.card-prata {
+    .card-prata {
         /* 44% garante que o 1º e o 2º fiquem na tela e o 3º apareça um pouquinho */
         flex: 0 0 44% !important; 
         min-width: 44% !important;
