@@ -813,13 +813,12 @@ header {
     /* 5. VITRINE DE PRODUTOS (Carrossel Horizontal) */
     .grid-produtos {
         display: flex !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        scroll-snap-type: x mandatory !important;
-        gap: 8px !important;
-        padding: 0 15px 10px 15px !important; 
-        margin: 0 auto !important; /* Zerei as margens para tirar o vácuo */
-        -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap !important; /* Mantém um do lado do outro para deslizar */
+        overflow-x: auto !important; /* Ativa o arrasto lateral */
+        scroll-snap-type: x mandatory !important; /* Faz o "imã" ao deslizar */
+        gap: 10px !important; 
+        padding: 0 15px 15px 15px !important;
+        -webkit-overflow-scrolling: touch; /* Deixa o deslize suave no iPhone */
     }
 
     .grid-produtos::-webkit-scrollbar {
@@ -827,14 +826,27 @@ header {
     }
 
     .card-prata {
-        flex: 0 0 45% !important;
+        /* O segredo está aqui: 46% permite que o segundo card apareça quase todo */
+        flex: 0 0 46% !important; 
         scroll-snap-align: start !important;
-        max-width: 200px !important;
+        max-width: none !important;
         padding: 8px !important;
+        box-sizing: border-box !important;
     }
 
     .img-container {
-        height: 130px !important;
+        width: 100% !important;
+        aspect-ratio: 1 / 1 !important; /* Garante que seja quadrado */
+        height: auto !important; /* Remove qualquer altura fixa antiga */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .img-container img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important; /* Preenche o quadrado sem distorcer */
     }
 
     .card-prata h3 {
@@ -916,4 +928,12 @@ header {
     .status-estoque i {
         font-size: 8px !important;
     }
+    .container-grid { 
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important; /* Cria as duas colunas iguais */
+        gap: 10px !important; /* Espaço entre os dois quadrados */
+        padding: 10px !important;
+    }
+
+
 }
